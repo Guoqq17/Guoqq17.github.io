@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-01-03T18:32:13.083Z</updated>
+  <updated>2021-01-03T19:03:47.705Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://example.com/2021/01/02/4WD-Car-SLAM-and-Control-1/"/>
     <id>http://example.com/2021/01/02/4WD-Car-SLAM-and-Control-1/</id>
     <published>2021-01-02T20:31:29.000Z</published>
-    <updated>2021-01-03T18:32:13.083Z</updated>
+    <updated>2021-01-03T19:03:47.705Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>I decided to start a robotics project since I have been becoming more and more interested in robotics (especially, connected and autonomous vehicles). In this project, I will build a 4WD car prototype using a commercial car kit. After setting the environment of both hardware and software, I will focus on three interesting topics: learn the robot operating system (ROS), simultaneous localization and mapping (SLAM) and vechile control. I currently do not know how far I can go, but we will see.</p><h2 id="Protocal-building-hardware"><a href="#Protocal-building-hardware" class="headerlink" title="Protocal building: hardware"></a>Protocal building: hardware</h2><p>Since the focuses (i.e., ROS, SLAM, and control) of this project are mainly software/algorithm oriented, I choose to use a car kit instead of building a self-designed car from scratch. The hardware that I use is <a href="https://www.amazon.com/gp/product/B07GJB7SWZ/ref=ppx_yo_dt_b_asin_title_o00_s01?ie=UTF8&amp;psc=1">Yahboom Super Starter AI Robot Kit</a>, a 4WD electrical car kit coming along with multiple sensors including camera, ultrasonic, and line tracking module.<br><img src="Yahboom_car_kit.jpg" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>I decided to start a robotics project since I have been becoming more and more interested in robotics (especially, connected and autonomous vehicles). In this project, I will build a 4WD car prototype using a commercial car kit. After setting the environment of both hardware and software, I will focus on three interesting topics: learn the robot operating system (ROS), simultaneous localization and mapping (SLAM) and vechile control. I currently do not know how far I can go, but we will see.</p><h2 id="Prototype-building-Hardware"><a href="#Prototype-building-Hardware" class="headerlink" title="Prototype building: Hardware"></a>Prototype building: Hardware</h2><p>Since the focuses (i.e., ROS, SLAM, and control) of this project are mainly software/algorithm oriented, I choose to use a car kit instead of building a self-designed car from scratch. The hardware that I use is <a href="https://www.amazon.com/gp/product/B07GJB7SWZ/ref=ppx_yo_dt_b_asin_title_o00_s01?ie=UTF8&amp;psc=1">Yahboom Super Starter AI Robot Kit</a>, a 4WD electrical car kit coming along with multiple sensors including camera, ultrasonic, and line tracking module. <a href="https://www.amazon.com/gp/product/B07TC2BK1X/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&amp;psc=1">Raspberry Pi 4B (64Bit, 4GB)</a> is selected as the onboard computer due to its powerful computation capability. It takes me and Xiaoping (thanks to my wife) 3 hours to assemble the car. It looks like this: </p><div align=center>  <img src="4WD-Car-SLAM-and-Control-1/Yahboom_car_kit_my.jpg" width="30%" height="30%"></div><h2 id="Prototype-building-Development-environment-building"><a href="#Prototype-building-Development-environment-building" class="headerlink" title="Prototype building: Development environment building"></a>Prototype building: Development environment building</h2>]]></content>
     
     
       
