@@ -27,15 +27,15 @@
 <meta property="og:site_name" content="Qiangqiang">
 <meta property="og:description" content="IntroductionI decided to start a robotics project since I have been becoming more and more interested in robotics (especially, connected and autonomous vehicles). In this project, I will build a 4WD c">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2021/01/02/4WD-Car-SLAM-and-Control-1/4WD-Car-SLAM-and-Control-1/Yahboom_car_kit_my.jpg">
+<meta property="og:image" content="http://example.com/2021/01/02/4WD-Car-SLAM-and-Control-1/Yahboom_car_kit_my.jpg">
 <meta property="article:published_time" content="2021-01-02T20:31:29.000Z">
-<meta property="article:modified_time" content="2021-01-03T19:03:47.705Z">
+<meta property="article:modified_time" content="2021-01-03T19:36:48.909Z">
 <meta property="article:author" content="Qiangqiang Guo">
 <meta property="article:tag" content="4WD car">
 <meta property="article:tag" content="control">
 <meta property="article:tag" content="slam">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2021/01/02/4WD-Car-SLAM-and-Control-1/4WD-Car-SLAM-and-Control-1/Yahboom_car_kit_my.jpg">
+<meta name="twitter:image" content="http://example.com/2021/01/02/4WD-Car-SLAM-and-Control-1/Yahboom_car_kit_my.jpg">
 
 <link rel="canonical" href="http://example.com/2021/01/02/4WD-Car-SLAM-and-Control-1/">
 
@@ -229,7 +229,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-01-03 11:03:47" itemprop="dateModified" datetime="2021-01-03T11:03:47-08:00">2021-01-03</time>
+                <time title="Modified: 2021-01-03 11:36:48" itemprop="dateModified" datetime="2021-01-03T11:36:48-08:00">2021-01-03</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -253,9 +253,12 @@
 
       
         <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>I decided to start a robotics project since I have been becoming more and more interested in robotics (especially, connected and autonomous vehicles). In this project, I will build a 4WD car prototype using a commercial car kit. After setting the environment of both hardware and software, I will focus on three interesting topics: learn the robot operating system (ROS), simultaneous localization and mapping (SLAM) and vechile control. I currently do not know how far I can go, but we will see.</p>
-<h2 id="Prototype-building-Hardware"><a href="#Prototype-building-Hardware" class="headerlink" title="Prototype building: Hardware"></a>Prototype building: Hardware</h2><p>Since the focuses (i.e., ROS, SLAM, and control) of this project are mainly software/algorithm oriented, I choose to use a car kit instead of building a self-designed car from scratch. The hardware that I use is <a target="_blank" rel="noopener" href="https://www.amazon.com/gp/product/B07GJB7SWZ/ref=ppx_yo_dt_b_asin_title_o00_s01?ie=UTF8&amp;psc=1">Yahboom Super Starter AI Robot Kit</a>, a 4WD electrical car kit coming along with multiple sensors including camera, ultrasonic, and line tracking module. <a target="_blank" rel="noopener" href="https://www.amazon.com/gp/product/B07TC2BK1X/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&amp;psc=1">Raspberry Pi 4B (64Bit, 4GB)</a> is selected as the onboard computer due to its powerful computation capability. It takes me and Xiaoping (thanks to my wife) 3 hours to assemble the car. It looks like this: </p>
-<div align=center>
-  <img src="4WD-Car-SLAM-and-Control-1/Yahboom_car_kit_my.jpg" width="30%" height="30%">
+<h2 id="Prototype-building-Hardware"><a href="#Prototype-building-Hardware" class="headerlink" title="Prototype building: Hardware"></a>Prototype building: Hardware</h2><p>Since the focuses (i.e., ROS, SLAM, and control) of this project are mainly software/algorithm oriented, I choose to use a car kit instead of building a self-designed car from scratch. The hardware that I use is <a target="_blank" rel="noopener" href="https://www.amazon.com/gp/product/B07GJB7SWZ/ref=ppx_yo_dt_b_asin_title_o00_s01?ie=UTF8&amp;psc=1">Yahboom Super Starter AI Robot Kit</a>, a 4WD electrical car kit coming along with multiple sensors including camera, ultrasonic, and line tracking module. <a target="_blank" rel="noopener" href="https://www.amazon.com/gp/product/B07TC2BK1X/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&amp;psc=1">Raspberry Pi 4B (64Bit, 4GB)</a> is selected as the onboard computer due to its powerful computation capability. It takes me and Xiaoping (thanks to my wife) 3 hours to assemble the car. It looks like this:<br><!-- ![]("Yahboom_car_kit_my.jpg") --></p>
+<!-- <div style="width: 200px; margin: auto">
+  ![](Yahboom_car_kit_my.jpg)
+</div> -->
+<div align="center">
+  <img src="/2021/01/02/4WD-Car-SLAM-and-Control-1/Yahboom_car_kit_my.jpg" width="30%" height="30%">
 </div>
 
 <h2 id="Prototype-building-Development-environment-building"><a href="#Prototype-building-Development-environment-building" class="headerlink" title="Prototype building: Development environment building"></a>Prototype building: Development environment building</h2>
