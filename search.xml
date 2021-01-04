@@ -3,16 +3,23 @@
   <entry>
     <title>4WD Car SLAM and Control (1) -- Introduction and prototype building</title>
     <url>/2021/01/02/4WD-Car-SLAM-and-Control-1/</url>
-    <content><![CDATA[<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>I decided to start a robotics project since I have been becoming more and more interested in robotics (especially, connected and autonomous vehicles). In this project, I will build a 4WD car prototype using a commercial car kit. After setting the environment of both hardware and software, I will focus on three interesting topics: learn the robot operating system (ROS), simultaneous localization and mapping (SLAM) and vechile control. I currently do not know how far I can go, but we will see.</p>
-<h2 id="Prototype-building-Hardware"><a href="#Prototype-building-Hardware" class="headerlink" title="Prototype building: Hardware"></a>Prototype building: Hardware</h2><p>Since the focuses (i.e., ROS, SLAM, and control) of this project are mainly software/algorithm oriented, I choose to use a car kit instead of building a self-designed car from scratch. The hardware that I use is <a href="https://www.amazon.com/gp/product/B07GJB7SWZ/ref=ppx_yo_dt_b_asin_title_o00_s01?ie=UTF8&amp;psc=1">Yahboom Super Starter AI Robot Kit</a>, a 4WD electrical car kit coming along with multiple sensors including camera, ultrasonic, and line tracking module. <a href="https://www.amazon.com/gp/product/B07TC2BK1X/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&amp;psc=1">Raspberry Pi 4B (64Bit, 4GB)</a> is selected as the onboard computer due to its powerful computation capability. It takes me and Xiaoping (thanks to my wife) 3 hours to assemble the car. It looks like this:<br><!-- ![]("Yahboom_car_kit_my.jpg") --></p>
-<!-- <div style="width: 200px; margin: auto">
-  ![](Yahboom_car_kit_my.jpg)
-</div> -->
+    <content><![CDATA[<h1 id="Introduction">1. Introduction</h1><p>I decided to start a robotics project since I have been becoming more and more interested in robotics (especially, connected and autonomous vehicles). In this project, I will build a 4WD car prototype using a commercial car kit. After setting the environment of both hardware and software, I will focus on three interesting topics: learn the robot operating system (ROS), simultaneous localization and mapping (SLAM) and vechile control. I currently do not know how far I can go, but we will see.</p>
+<h1 id="Prototype-building-Hardware">2. Prototype building: Hardware</h1><p>Since the focuses (i.e., ROS, SLAM, and control) of this project are mainly software/algorithm oriented, I choose to use a car kit instead of building a self-designed car from scratch. The hardware that I use is <a href="https://www.amazon.com/gp/product/B07GJB7SWZ/ref=ppx_yo_dt_b_asin_title_o00_s01?ie=UTF8&amp;psc=1">Yahboom Super Starter AI Robot Kit</a>, a 4WD electrical car kit coming along with multiple sensors including camera, ultrasonic, and line tracking module. <a href="https://www.amazon.com/gp/product/B07TC2BK1X/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&amp;psc=1">Raspberry Pi 4B (64Bit, 4GB)</a> is selected as the onboard computer due to its powerful computation capability. It takes me and Xiaoping (thanks to my wife) 3 hours to assemble the car. It looks like this:</p>
 <div align="center">
   <img src="/2021/01/02/4WD-Car-SLAM-and-Control-1/Yahboom_car_kit_my.jpg" width="30%" height="30%">
 </div>
 
-<h2 id="Prototype-building-Development-environment-building"><a href="#Prototype-building-Development-environment-building" class="headerlink" title="Prototype building: Development environment building"></a>Prototype building: Development environment building</h2>]]></content>
+<h1 id="Prototype-building-Development-environment">3. Prototype building: Development environment</h1><p>There are several steps to building the development environment after assembling the hardware, which are shown in the following.</p>
+<h2 id="Install-Ubuntu-Mate-on-Raspberry-Pi">3.1. Install Ubuntu Mate on Raspberry Pi</h2><ul>
+<li>Download <a href="https://ubuntu-mate.org/">Ubuntu Mate</a>.</li>
+<li>Decompress it.</li>
+<li>Use <a href="https://www.balena.io/etcher/">Balena etcher</a> to flash it to a SD card (at least 8GB).</li>
+<li>Inserted the SD card to Raspberry Pi.</li>
+<li>Connect the Raspberry Pi to a monitor and plug in a mouse and a keyboard.</li>
+<li>Power on Raspberry Pi and follow the straightforward installation process.</li>
+<li>After installation, update Ubuntu</li>
+</ul>
+<h2 id="System-settings">3.2. System settings</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git status</span><br><span class="line">git add</span><br><span class="line">git commit</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Robotics</category>
       </categories>
