@@ -28,7 +28,7 @@
 <meta property="og:description" content="1. IntroductionIn this series of blogs, I will summarize and implement some key algorithms in RL. This serves as a self-learning notes on my way to RL. 2. Deep Q-LearningThis section follows the flow">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-01-04T20:58:12.000Z">
-<meta property="article:modified_time" content="2021-01-04T22:09:52.484Z">
+<meta property="article:modified_time" content="2021-01-06T21:59:30.545Z">
 <meta property="article:author" content="Qiangqiang Guo">
 <meta property="article:tag" content="Reinforcement Learning">
 <meta property="article:tag" content="Tensorflow">
@@ -219,10 +219,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-01-04 12:58:12 / Modified: 14:09:52" itemprop="dateCreated datePublished" datetime="2021-01-04T12:58:12-08:00">2021-01-04</time>
+              <time title="Created: 2021-01-04 12:58:12" itemprop="dateCreated datePublished" datetime="2021-01-04T12:58:12-08:00">2021-01-04</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-06 13:59:30" itemprop="dateModified" datetime="2021-01-06T13:59:30-08:00">2021-01-06</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -283,7 +289,11 @@ v_{*}(s) &=\max _{a \in \mathcal{A}(s)} q_{\pi_{*}}(s, a) \\
 \begin{aligned}
 q_{*}(s, a) &=\mathbb{E}\left[R_{t+1}+\gamma \max _{a^{\prime}} q_{*}\left(S_{t+1}, a^{\prime}\right) \mid S_{t}=s, A_{t}=a\right] \\
 &=\sum p\left(s^{\prime}, r \mid s, a\right)\left[r+\gamma \max_{a^{\prime}}q_{*}\left(s^{\prime}, a^{\prime}\right)\right]
-\end{aligned} \tag{8}\label{8}</script><p><a target="_blank" rel="noopener" href="https://storage.googleapis.com/deepmind-data/assets/papers/DeepMindNature14236Paper.pdf">Mnih et al. (2015)</a> proposed the Deep Q-Networks (DQN) algorithm at Nature. This will be used as the baseline of this section. A convolutional neural network is used to learn the Q values using experience replay.</p>
+\end{aligned} \tag{8}\label{8}</script><p>Let $Q, Q_{t}$ and $V, V_{t}$ be the estimates of $q_{\pi}$ (or $q_{\ast}$) and $v_{\pi}$ (or $v_{\ast}$). The Q-learning (<a target="_blank" rel="noopener" href="https://scholar.google.com/scholar?q=Q-learning+(Watkins,+1989">Watkins, 1989</a>&amp;hl=en&amp;as_sdt=0&amp;as_vis=1&amp;oi=scholart)) was developed to directly approximate $q_{\ast}$:</p>
+<script type="math/tex; mode=display">
+Q\left(S_{t}, A_{t}\right) \leftarrow Q\left(S_{t}, A_{t}\right)+\alpha\left[R_{t+1}+\gamma \max _{a} Q\left(S_{t+1}, a\right)-Q\left(S_{t}, A_{t}\right)\right]</script><p>Q-Learning is an off-policy time differential (TD) method. The only and key assumption for the convergence of Q-Learning is that all pairs continue to be updated. “Under this assumption and a variant of the usual stochastic approximation conditions on the sequence of step-size parameters, Q has been shown to converge with probability 1 to $q_{\ast}$” (<a target="_blank" rel="noopener" href="https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf">Sutton and Barto</a>).</p>
+<p>For tabular Q-Learning, actually for all tabular RL methods, it is difficult to deal with problems with large state spaces. First, large state space requires large memory to store the tabular action/state values. Second, the time and data should fill the table accurately. If every state encountered will never have been seen before, it is hard to accurately update the table. Therefore, function approximation (supervised learning) is introduced to generalize from previous encounters with different states that are in some sense similar to the current one. Among various function approximation methods, deep neural networks have been recieving increasing attention due to its capability of approximating almost every function that we can imagine.</p>
+<p><a target="_blank" rel="noopener" href="https://storage.googleapis.com/deepmind-data/assets/papers/DeepMindNature14236Paper.pdf">Mnih et al. (2015)</a> proposed the Deep Q-Networks (DQN) algorithm at Nature. This will be used as the baseline of this section. A convolutional neural network is used to learn the Q values using experience replay.</p>
 
     </div>
 
