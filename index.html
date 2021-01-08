@@ -223,7 +223,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-01-06 13:59:30" itemprop="dateModified" datetime="2021-01-06T13:59:30-08:00">2021-01-06</time>
+                <time title="Modified: 2021-01-08 13:36:44" itemprop="dateModified" datetime="2021-01-08T13:36:44-08:00">2021-01-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -289,7 +289,7 @@ q_{*}(s, a) &=\mathbb{E}\left[R_{t+1}+\gamma \max _{a^{\prime}} q_{*}\left(S_{t+
 <script type="math/tex; mode=display">
 Q\left(S_{t}, A_{t}\right) \leftarrow Q\left(S_{t}, A_{t}\right)+\alpha\left[R_{t+1}+\gamma \max _{a} Q\left(S_{t+1}, a\right)-Q\left(S_{t}, A_{t}\right)\right]</script><p>Q-Learning is an off-policy time differential (TD) method. The only and key assumption for the convergence of Q-Learning is that all pairs continue to be updated. “Under this assumption and a variant of the usual stochastic approximation conditions on the sequence of step-size parameters, Q has been shown to converge with probability 1 to $q_{\ast}$” (<a target="_blank" rel="noopener" href="https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf">Sutton and Barto</a>).</p>
 <p>For tabular Q-Learning, actually for all tabular RL methods, it is difficult to deal with problems with large state spaces. First, large state space requires large memory to store the tabular action/state values. Second, the time and data should fill the table accurately. If every state encountered will never have been seen before, it is hard to accurately update the table. Therefore, function approximation (supervised learning) is introduced to generalize from previous encounters with different states that are in some sense similar to the current one. Among various function approximation methods, deep neural networks have been recieving increasing attention due to its capability of approximating almost every function that we can imagine.</p>
-<p><a target="_blank" rel="noopener" href="https://storage.googleapis.com/deepmind-data/assets/papers/DeepMindNature14236Paper.pdf">Mnih et al. (2015)</a> proposed the Deep Q-Networks (DQN) algorithm at Nature. This will be used as the baseline of this section. A convolutional neural network is used to learn the Q values using experience replay.</p>
+<p><a target="_blank" rel="noopener" href="https://storage.googleapis.com/deepmind-data/assets/papers/DeepMindNature14236Paper.pdf">Mnih et al. (2015)</a> proposed the Deep Q-Networks (DQN) algorithm at Nature. This will be used as the baseline of this section. A convolutional neural network is used to learn the Q values using experience replay. I implemented this original DQN algorithm <a target="_blank" rel="noopener" href="https://github.com/Guoqq17/A-summary-of-RL-algorithms.git">here</a>. It is noted that Q-Networks with and without CNN are built. </p>
 
       
     </div>
