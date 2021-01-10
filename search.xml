@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>4WD Car SLAM and Control (1) -- Introduction and prototype building</title>
-    <url>/2021/01/02/4WD-Car-SLAM-and-Control-1/</url>
+    <title>4WD Car SLAM and Control -- Introduction and prototype building</title>
+    <url>/2021/01/02/4WD-Car-SLAM-and-Control-Introduction-and-prototype-building/</url>
     <content><![CDATA[<h1 id="Introduction">1. Introduction</h1><p>I decided to start a robotics project since I have been becoming more and more interested in robotics (especially, connected and autonomous vehicles). In this project, I will build a 4WD car prototype using a commercial car kit. After setting the environment of both hardware and software, I will focus on three interesting topics: learn the robot operating system (ROS), simultaneous localization and mapping (SLAM) and vechile control. I currently do not know how far I can go, but we will see.</p>
 <h1 id="Prototype-building-Hardware">2. Prototype building: Hardware</h1><p>Since the focuses (i.e., ROS, SLAM, and control) of this project are mainly software/algorithm oriented, I choose to use a car kit instead of building a self-designed car from scratch. The hardware that I use is <a href="https://www.amazon.com/gp/product/B07GJB7SWZ/ref=ppx_yo_dt_b_asin_title_o00_s01?ie=UTF8&amp;psc=1">Yahboom Super Starter AI Robot Kit</a>, a 4WD electrical car kit coming along with multiple sensors including camera, ultrasonic, and line tracking module. <a href="https://www.amazon.com/gp/product/B07TC2BK1X/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&amp;psc=1">Raspberry Pi 4B (64Bit, 4GB)</a> is selected as the onboard computer due to its powerful computation capability. It takes me and Xiaoping (thanks to my wife) 3 hours to assemble the car. It looks like this:</p>
 <div align="center">
-  <img src="/2021/01/02/4WD-Car-SLAM-and-Control-1/Yahboom_car_kit_my.jpg" width="30%" height="30%">
+  <img src="/2021/01/02/4WD-Car-SLAM-and-Control-Introduction-and-prototype-building/Yahboom_car_kit_my.jpg" width="30%" height="30%">
 </div>
 
 <h1 id="Prototype-building-Development-environment">3. Prototype building: Development environment</h1><p>There are several steps to building the development environment after assembling the hardware, which are shown in the following.</p>
@@ -47,8 +47,8 @@
       </tags>
   </entry>
   <entry>
-    <title>A summary of RL algorithms (1) Deep Q-Learning</title>
-    <url>/2021/01/04/A-summary-of-RL-algorithms-1-Deep-Q-Learning/</url>
+    <title>A summary of RL algorithms -- Deep Q-Learning</title>
+    <url>/2021/01/04/A-summary-of-RL-algorithms-Deep-Q-Learning/</url>
     <content><![CDATA[<h1 id="Introduction">1. Introduction</h1><p>In this series of blogs, I will summarize and implement some key algorithms in RL. This serves as a self-learning notes on my way to RL.</p>
 <h1 id="Deep-Q-Learning">2. Deep Q-Learning</h1><p>This section follows the flow of this paper: <a href="https://arxiv.org/pdf/1710.02298.pdf">Rainbow: Combining Improvements in Deep Reinforcement Learning (Hessel et al., 2017)</a>, which gives a good summary of Deep Q-learning algorithms as well as test different combinations of those algorithms.</p>
 <h2 id="Original-deep-Q-Networks-DQN">2.1. Original deep Q-Networks (DQN)</h2><p>Let’s start from the very beginning. Please refer to <a href="https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf">Sutton and Barto</a> for details of the definations of a Markov decision process (MDP). The notations used here are same as those used in this book. Define the state-value function for policy $\pi$</p>
@@ -94,7 +94,7 @@ Q\left(S_{t}, A_{t}\right) \leftarrow Q\left(S_{t}, A_{t}\right)+\alpha\left[R_{
 <p>For tabular Q-Learning, actually for all tabular RL methods, it is difficult to deal with problems with large state spaces. First, large state space requires large memory to store the tabular action/state values. Second, the time and data should fill the table accurately. If every state encountered will never have been seen before, it is hard to accurately update the table. Therefore, function approximation (supervised learning) is introduced to generalize from previous encounters with different states that are in some sense similar to the current one. Among various function approximation methods, deep neural networks have been recieving increasing attention due to its capability of approximating almost every function that we can imagine.</p>
 <p><a href="https://storage.googleapis.com/deepmind-data/assets/papers/DeepMindNature14236Paper.pdf">Mnih et al. (2015)</a> proposed the Deep Q-Networks (DQN) algorithm at Nature. This will be used as the baseline of this section. A convolutional neural network is used to learn the Q values using experience replay. The pseudocode of this algorithm is</p>
 <p><div align="center">
-  <img src="/2021/01/04/A-summary-of-RL-algorithms-1-Deep-Q-Learning/DQN.png" width="55%" height="50%">
+  <img src="/2021/01/04/A-summary-of-RL-algorithms-Deep-Q-Learning/DQN.png" width="55%" height="50%">
 </div><br>I implemented this original DQN algorithm <a href="https://github.com/Guoqq17/A-summary-of-RL-algorithms.git">here</a>. It is noted that Q-Networks with and without CNN are built.</p>
 ]]></content>
       <categories>
